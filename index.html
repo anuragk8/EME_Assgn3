@@ -46,7 +46,7 @@
 
 <div class="container my-4 d-flex flex-column align-items-center quiz-background">
     <h1 class="text-center">Car Models Quiz</h1>
-    <p class="text-center">Drag and drop each car model into the correct brand category. Each category can contain only <span style="color: #FF0000">4 items</span>.</p>
+    <p class="text-center">Drag and drop each car model into the correct brand category. Each category can contain only <span style="color: #FF0000">3 items</span>.</p>
     
     <!-- Main drag-drop container -->
     <div id="dhtmlgoodies_dragDropContainer" class="d-flex justify-content-center align-items-start gap-3">
@@ -105,7 +105,7 @@
         var item = document.getElementById(data);
 
         // Check if the target box already has 4 items
-        if (ev.target.classList.contains('dropzone') && ev.target.querySelectorAll('li').length < 4) {
+        if (ev.target.classList.contains('dropzone') && ev.target.querySelectorAll('li').length < 3) {
             ev.target.appendChild(item);
             // Change background color based on correct or incorrect placement
             if (item.getAttribute('groupid') === ev.target.id) {
